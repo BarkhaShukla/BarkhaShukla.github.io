@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Barkha Shukla</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+ body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #700000;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #700000;
+      font-size: 50px;
+  }
+  .logo {
+      color: #700000;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #700000;
+  }
+  .carousel-indicators li {
+      border-color: #700000;
+  }
+  .carousel-indicators li.active {
+      background-color: #700000;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #700000; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #700000;
+      background-color: #fff !important;
+      color: #700000;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #700000 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #700000;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #700000;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #700000 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #700000;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+</style>
+<body id="HomePage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#certifications">CERTIFICATIONS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Barkha Ramesh Shukla</h1> 
+  <p>Graduate Student : Computer Science</p> 
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Me . . </h2><br>
+      <h4>I am a Graduate student of Computer Science at Northern Illinois University.</h4><br>   
+	  <p> I have a passion for java & web technologies, and have collaborated with classmates to work on projects and websites.</p>     
+	  <p> My keen interest also lies in data visualization & analysis.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="" class="img-thumbnail"/>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-5">
+      <h2>What I believe . . </h2>
+		<ul>
+		<li>“The best way to succeed in this world is to act on the advice you give to others.” </li>
+		<li>“Success is not final, failure is not fatal: it is the courage to continue that counts.” </li>
+		<li>“You don't have to see the whole staircase, just take the first step.”</li>
+		</ul>
+      
+    </div>
+	<div class="col-sm-4">
+		<iframe align="center" src="http://widget.calendarlabs.com/v1/quot.php?cid=101&uid=154651372&c=random&l=en&cbg=FFFFFF&cb=1&cbc=000000&cf=calibri&cfg=000000&qfs=bi&qta=center&tfg=000000&tfs=bi&afc=000000&afs=i" width="188" height="210" marginwidth=2 marginheight=2 frameborder=0 scrolling=no allowtransparency='true'>Loading...
+		</iframe>
+	</div>
+  </div>
+</div>
+
+<!-- Container (Skills Section) -->
+<div id="skills" class="container-fluid text-center">
+  <h2>SKILLS</h2>
+  <h4>What can I do..?</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <img src="http://logodatabases.com/wp-content/uploads/2012/03/java-logo-large.png" class="img-rounded" height=80px width=100px>
+      <h4>JAVA</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="http://www.pngall.com/wp-content/uploads/2016/05/C-PNG-Clipart.png" class="img-rounded" height=90 width=110>
+      <h4>C++</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://image.freepik.com/free-vector/android-boot-logo_634639.jpg" class="img-rounded" height=100 width=90>
+      <h4>ANDROID</h4>
+    </div>
+	<div class="col-sm-3">
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTJm6Znz7pacIU1_4BMJfk2NSxmzQ3yHF2gGzHaGK0C4Lj81oFv6w" class="img-rounded" height=100 width=90>
+      <h4>HTML/ CSS</h4>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+       <img src="https://qph.ec.quoracdn.net/main-qimg-9c7723e302afb4d0063023eba3055e9e" class="img-rounded" height=80px width=100px>
+      <h4>PHP</h4>
+    </div>
+    <div class="col-sm-3">
+      <img src="http://www.fetchlogos.com/wp-content/uploads/2015/12/MySQL-Logo.jpg" class="img-rounded" height=80px width=110px>
+      <h4>SQL</h4>
+    </div>
+	<div class="col-sm-3">
+      <img src="https://uploads.toptal.io/blog/category/logo/59/spring.png" class="img-rounded" height=80 width=80>
+      <h4>SPRING</h4>
+    </div>
+  </div>
+</div>
+<br>
+<!-- Container (certifications Section) -->
+<div id="certifications" class="container-fluid text-center bg-grey">
+  <h2>Certifications . . </h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"The Complete JavaScript Bootcamp"
+			<br><span>EduMobile Academy
+			<br>Udemy.com</span>
+		</h4>
+      </div>
+      <div class="item">
+        <h4>"An Introduction to Interactive Programming in Python (Part 1 & 2)"
+			<br><span>Rice University
+			<br>Coursera.com</span>
+		</h4>
+      </div>
+      <div class="item">
+        <h4>"Up and Running with R"
+			<br><span>Lynda.com</span>
+		</h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+<!-- Container (Projects Section) -->
+<div id="projects" class="container-fluid">
+  <div class="text-center">
+    <h2>Projects</h2>
+    <h4>Lemme Demonstrate . . !</h4>
+  </div>
+  <div class="row slideanim">
+	 <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Freshwater Withdrawal</h1>
+        </div>
+        <div class="panel-body">
+			<p>Visualization Project to analyze which country is misusing the water resource and which country is using most of its water for which sector.</p>
+			<p>Data filtering and processing performed using Python and R programming was used for actual visual representation of filtered data.</p>
+        </div>
+        <div class="panel-footer">
+          <h3>NIU</h3>
+		  <h4>M.S.<h4>
+        </div>
+      </div>      
+    </div>
+  
+  
+  
+    <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Inventory System Prototype</h1>
+        </div>
+        <div class="panel-body">
+			<p>Developed in MS Access along with forms for user input & and database to store input.</p>
+			<p>UML diagrams & requirement collection were integral part of the project.</p>
+
+        </div>
+        <div class="panel-footer">
+          <h3>NIU</h3>
+		  <h4>M.S.<h4>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Invoice Billing with Active Notification Centre</h1>
+        </div>
+        <div class="panel-body">
+			<p>System developed for RST forum to bill the customers as per the courses they registered for, consisting of a module that deals with SMS & E-mail where active notification is sent to registered students.</p>
+			<p>Another module has the attendance recorded for each of the students in the system.</p>
+			<p>Crystal report generation option available for each student profile.</p>
+
+			
+        <div class="panel-footer">
+          <h3>Mumbai University</h3>
+		  <h4> B.E </h4>
+        </div>
+      </div>      
+	</div> 
+	</div>	
+	
+    <div class="col-sm-3 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>CompSec <br> E-Learning <br> Website</h1>
+        </div>
+        <div class="panel-body">
+			<p>Use of WordPress to embed Video Tutorials for the subject of Computer Security.</p>
+			<p>Content Collection & Management about Computer Security for the website.</p>
+        </div>
+        <div class="panel-footer">
+          <h3>MSBTE</h3>
+		  <h4>Diploma</h4>
+        </div>
+      </div>      
+    </div>    
+	
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p><span class="glyphicon glyphicon-map-marker"></span> Illinois, USA</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +1(815)-508-5138</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> shuklabarkha17@gmail.com</p>
+	  	<div class="givesomeroom">
+        <p><span class="glyphicon glyphicon-thumbs-up"></span> JOIN ME ON:</p>            
+                            <p>
+                                <a href="https://www.facebook.com/barkha30?viewas=100000686899395&privacy_source=timeline_gear_menu"><img height=50px width=50px class="img-circle" src="http://nasl.ezitsolutions.com/teamuploads/atl/images/facebook%20logo%20png%20transparent%20background.png" alt="Icon">
+								<a href="https://www.linkedin.com/in/barkha-ramesh-shukla/"><img height=50px width=50px class="img-circle" src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/linkedin-512.png" alt="Icon"></a>
+								
+                            </p>
+        </div>
+    </div>
+`</div>
+</div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#HomePage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#HomePage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<!-- <script>
+function validateForm() {
+    var x = document.forms["contactUs"]["contact"].value;
+	var email = document.forms["contactUs"]["email"].value;
+	if (x == null || x =="")
+	{
+		var y = "go";
+	}
+	if (email =="bsmarty.30@gmail.com" || email =="")
+	{
+		var y = "nogo"
+	}
+    if (y!="go") 
+	{
+        return false;
+    }
+}
+</script>
+
+-->
+
+</body>
+</html>
